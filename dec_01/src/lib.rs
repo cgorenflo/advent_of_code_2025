@@ -98,10 +98,7 @@ pub fn find_password(
 
     for rotation in dial_rotations {
         pw.passed_zero += dial.rotate(rotation);
-
-        if dial == 0 {
-            pw.landed_on_zero += 1;
-        }
+        pw.landed_on_zero += (dial == 0) as u16;
     }
 
     pw
