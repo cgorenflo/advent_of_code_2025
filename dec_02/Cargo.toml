@@ -1,0 +1,22 @@
+[package]
+name = "dec_02"
+version = "0.1.0"
+rust-version.workspace = true
+edition.workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+
+[dev-dependencies]
+criterion = "0.5"
+
+[[bench]]
+name = "doubled_sequence"
+harness = false
+
+[[bench]]
+name = "repeated_sequence"
+harness = false
+
+[lints]
+workspace = true
