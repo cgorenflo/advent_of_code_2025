@@ -1,3 +1,16 @@
+//! # Algorithm
+//!
+//! Find IDs in given ranges that are "doubled" (e.g., 1212) or "repeated" (e.g., 123123123).
+//!
+//! **Part 1 (doubled)**: Check if first half equals second half. Arithmetic approach
+//! (~5x faster than string) uses `id / divisor == id % divisor`.
+//!
+//! **Part 2 (repeated)**: Three approaches implemented:
+//! - *Multiplication*: build test number by repeating pattern, compare to original
+//! - *Division*: break down number chunk by chunk, verify each matches pattern
+//! - *Generative* (~40% faster): generate repeated sequences directly using a
+//!   "repetition generator" (e.g., 1001001) instead of testing every number
+
 use std::collections::HashSet;
 use std::fs;
 use std::ops::RangeInclusive;

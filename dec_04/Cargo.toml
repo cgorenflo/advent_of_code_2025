@@ -1,0 +1,12 @@
+[package]
+name = "dec_04"
+version = "0.1.0"
+rust-version.workspace = true
+edition.workspace = true
+
+[dependencies]
+anyhow = "1"
+itertools = "0.14"
+
+[lints]
+workspace = true

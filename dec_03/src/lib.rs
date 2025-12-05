@@ -1,3 +1,14 @@
+//! # Algorithm
+//!
+//! Select digits from a battery bank to form the maximum number, preserving left-to-right order.
+//!
+//! **Part 1 (2 digits)**: Scan right-to-left, greedily picking the leftmost largest digit
+//! for tens place. The `MaxPair` struct tracks best candidates seen so far.
+//!
+//! **Part 2 (12 digits)**: Repeatedly pick best pairs from a shrinking window.
+//! After picking a pair ending at index `i`, the next window starts at `i+1`
+//! and reserves room at the end for remaining digits to pick.
+
 use std::fs;
 
 use anyhow::Result;

@@ -1,5 +1,5 @@
 [workspace]
-members = ["dec_01", "dec_02", "dec_03"]
+members = ["dec_01", "dec_02", "dec_03", "dec_04"]
 resolver = "3"
 
 [workspace.package]

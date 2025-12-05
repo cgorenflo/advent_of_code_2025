@@ -1,3 +1,12 @@
+//! # Algorithm
+//!
+//! Simulate a dial rotating left/right. Track two metrics:
+//! - **landed_on_zero**: how many times the dial stops at 0
+//! - **passed_zero**: how many times the dial crosses 0 during rotation
+//!
+//! The tricky part is counting passes through zero: `div_euclid` counts full wraps,
+//! plus we add 1 if we started positive and ended at/below 0.
+
 use std::fs;
 use std::ops::{Add, Neg};
 use std::str::FromStr;
