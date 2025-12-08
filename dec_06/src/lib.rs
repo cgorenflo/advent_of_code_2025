@@ -84,7 +84,9 @@ pub fn solve_worksheet(input: &str, parser: fn(&str) -> Vec<Vec<Term>>) -> u64 {
             let result = problem
                 .iter()
                 .filter_map(|term| term.number())
-                .fold(operator.identity_element(), |acc, num| operator.apply(acc, num));
+                .fold(operator.identity_element(), |acc, num| {
+                    operator.apply(acc, num)
+                });
             Some(result)
         })
         .sum()

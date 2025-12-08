@@ -1,5 +1,7 @@
 use anyhow::Result;
-use dec_04::{compute_touching_rolls_in_row, count_all_accessible_rolls, find_accessible_rolls, read_input};
+use dec_04::{
+    compute_touching_rolls_in_row, count_all_accessible_rolls, find_accessible_rolls, read_input,
+};
 
 fn main() -> Result<()> {
     let grid = read_input("dec_04/input.txt")?;

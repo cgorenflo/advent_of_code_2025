@@ -169,11 +169,12 @@ pub fn read_id_ranges(path: &str) -> Result<Vec<RangeInclusive<u64>>> {
 
 #[cfg(test)]
 mod tests {
+    use std::ops::RangeInclusive;
+
     use crate::{
         filter_by, find_repeated_sequences_in_range, find_sum_of_invalid_ids, is_doubled_sequence,
         is_doubled_sequence_string, is_repeated_sequence, is_repeated_sequence_div,
     };
-    use std::ops::RangeInclusive;
 
     const EXAMPLE_RANGES: [RangeInclusive<u64>; 11] = [
         11..=22,

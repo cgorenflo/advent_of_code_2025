@@ -21,7 +21,5 @@ pub fn generate_test_values() -> Vec<u64> {
         seed
     };
 
-    (0..1_000_000)
-        .map(|_| next() % 100_000_000_000)
-        .collect()
+    (0..1_000_000).map(|_| next() % 100_000_000_000).collect()
 }

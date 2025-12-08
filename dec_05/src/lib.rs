@@ -40,7 +40,10 @@ pub fn analyze_fresh_ingredients(ranges: Vec<RangeInclusive<u64>>, ids: &[u64]) 
         .filter(|&id| is_fresh(&merged, id))
         .count() as u64;
 
-    let total_fresh = merged.iter().map(|range| range.end() - range.start() + 1).sum();
+    let total_fresh = merged
+        .iter()
+        .map(|range| range.end() - range.start() + 1)
+        .sum();
 
     (available_fresh, total_fresh)
 }

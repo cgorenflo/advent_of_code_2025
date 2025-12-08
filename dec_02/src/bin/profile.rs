@@ -1,12 +1,13 @@
 #[path = "../../benches/common.rs"]
 mod common;
 
-use common::{generate_test_values, EXAMPLE_RANGES};
+use std::hint::black_box;
+
+use common::{EXAMPLE_RANGES, generate_test_values};
 use dec_02::{
     find_repeated_sequences_in_range, find_sum_of_invalid_ids, is_doubled_sequence,
     is_doubled_sequence_string, is_repeated_sequence, is_repeated_sequence_div,
 };
-use std::hint::black_box;
 
 fn main() {
     let mode = std::env::args()

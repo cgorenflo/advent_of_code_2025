@@ -1,6 +1,6 @@
 mod common;
 
-use common::{generate_test_values, EXAMPLE_RANGES};
+use common::{EXAMPLE_RANGES, generate_test_values};
 use criterion::{Criterion, black_box, criterion_group, criterion_main};
 use dec_02::{
     find_repeated_sequences_in_range, find_sum_of_invalid_ids, is_repeated_sequence,
@@ -53,5 +53,11 @@ fn bench_range_generative(c: &mut Criterion) {
     });
 }
 
-criterion_group!(benches, bench_mul, bench_div, bench_range_iterative, bench_range_generative);
+criterion_group!(
+    benches,
+    bench_mul,
+    bench_div,
+    bench_range_iterative,
+    bench_range_generative
+);
 criterion_main!(benches);

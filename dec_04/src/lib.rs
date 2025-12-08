@@ -110,7 +110,8 @@ pub fn count_all_accessible_rolls(mut grid: Grid) -> usize {
     let mut count = 0;
 
     while !accessible_candidates.is_empty() {
-        let (removed, next) = remove_accessible_rolls(accessible_candidates, &mut grid, &mut touching_rolls_in_row);
+        let (removed, next) =
+            remove_accessible_rolls(accessible_candidates, &mut grid, &mut touching_rolls_in_row);
         count += removed;
         accessible_candidates = next;
     }
@@ -188,7 +189,10 @@ mod tests {
     fn part1() {
         let grid = Grid::from(EXAMPLE);
         let touching_rolls_in_row = compute_touching_rolls_in_row(&grid);
-        assert_eq!(find_accessible_rolls(&grid, &touching_rolls_in_row).len(), 13);
+        assert_eq!(
+            find_accessible_rolls(&grid, &touching_rolls_in_row).len(),
+            13
+        );
     }
 
     #[test]
