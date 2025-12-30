@@ -1,5 +1,5 @@
 [workspace]
-members = ["dec_01", "dec_02", "dec_03", "dec_04", "dec_05", "dec_06", "dec_07"]
+members = ["dec_01", "dec_02", "dec_03", "dec_04", "dec_05", "dec_06", "dec_07", "dec_08"]
 resolver = "3"
 
 [workspace.package]
@@ -8,6 +8,9 @@ edition = "2024"
 
 [workspace.dependencies]
 anyhow = "1.0.100"
+criterion = "0.8.1"
+itertools = "0.14.0"
+tap = "1.0.1"
 
 [workspace.lints.clippy]
 cast_possible_truncation = "deny"

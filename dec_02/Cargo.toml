@@ -8,7 +8,7 @@ edition.workspace = true
 anyhow = { workspace = true }
 
 [dev-dependencies]
-criterion = "0.5"
+criterion = { workspace = true }
 
 [[bench]]
 name = "doubled_sequence"

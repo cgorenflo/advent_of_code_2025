@@ -6,7 +6,6 @@ edition.workspace = true
 
 [dependencies]
 anyhow = { workspace = true }
-itertools = "0.14.0"
 
 [lints]
 workspace = true
